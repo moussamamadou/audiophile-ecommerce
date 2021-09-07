@@ -1,21 +1,18 @@
-import CategoryButtons from "./CategoryButtons"
-import Footer from "./Footer"
-import Navbar from "./Navbar"
+import Footer from "./elements/Footer"
+import Navbar from "./elements/Navbar"
 
-const Layout = ({ children, categories }) => {
-  return (
-    <div className="flex justify-center bg-gray-200">
-      <div className="max-w-screen-lg flex flex-col min-h-screen w-full">
-        <Navbar />
-        <CategoryButtons categories={categories} />
-        <div className="flex-grow">{children}</div>
-        <Footer />
+const Layout = ({ children, global }) => {
+ 
+  const { navbar, footer, categoryLink } = global
+  return (      
+    <div className="flex justify-center bg-light">
+      <div className="flex flex-col min-h-screen w-full">
+        <Navbar navbar={navbar} categoryLink={ categoryLink }/>
+        <main className="flex-grow">{children}</main>
+        <Footer  footer={footer} />        
       </div>
-      <div
-        hidden
-        id="snipcart"
-        data-api-key="ODhhNWUxOGEtNTk0OC00OTQwLWJkOWMtM2M1ZmNjODU1ZDJhNjM3MzMyNzM0NjM1OTMyNjcz"
-      />
+      <script async src="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.js"></script>
+      <div id="snipcart" data-config-modal-style={"side"} data-api-key="N2UxOGQ5Y2MtYjVhMC00OTNmLWJmZGYtY2NhMjk3MWZlYTdkNjM3NjY1MDkxMDk0NTU1NzEz" hidden></div>
     </div>
   )
 }
