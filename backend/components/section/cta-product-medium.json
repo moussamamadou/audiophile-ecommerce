@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_section_cta_product_mediums",
+  "info": {
+    "name": "ctaProductMedium",
+    "icon": "arrow-alt-circle-left"
+  },
+  "options": {},
+  "attributes": {
+    "product": {
+      "model": "product"
+    }
+  }
+}

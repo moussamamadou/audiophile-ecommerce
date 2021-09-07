@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_section_cta_product_bigs",
+  "info": {
+    "name": "ctaProductBig",
+    "icon": "arrow-alt-circle-down",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "product": {
+      "model": "product"
+    }
+  }
+}

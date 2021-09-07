@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_section_cta_product_smalls",
+  "info": {
+    "name": "ctaProductSmall",
+    "icon": "arrow-alt-circle-right"
+  },
+  "options": {},
+  "attributes": {
+    "product": {
+      "model": "product"
+    }
+  }
+}

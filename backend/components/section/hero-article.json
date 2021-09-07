@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_section_hero_articles",
+  "info": {
+    "name": "HeroArticle",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "product": {
+      "model": "product"
+    }
+  }
+}

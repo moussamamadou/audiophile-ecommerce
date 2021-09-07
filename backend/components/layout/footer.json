@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_layout_footers",
+  "info": {
+    "name": "footer",
+    "icon": "window-minimize",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "link": {
+      "type": "component",
+      "repeatable": true,
+      "component": "links.links"
+    },
+    "bigText": {
+      "type": "string"
+    },
+    "smallText": {
+      "type": "string"
+    }
+  }
+}

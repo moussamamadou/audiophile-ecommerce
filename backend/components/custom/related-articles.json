@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_custom_related_articles",
+  "info": {
+    "name": "relatedArticles",
+    "icon": "list-ul"
+  },
+  "options": {},
+  "attributes": {
+    "products": {
+      "collection": "product"
+    },
+    "label": {
+      "type": "string"
+    }
+  }
+}

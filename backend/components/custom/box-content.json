@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_custom_box_contents",
+  "info": {
+    "name": "boxContent",
+    "icon": "list"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "quantity": {
+      "type": "string"
+    }
+  }
+}

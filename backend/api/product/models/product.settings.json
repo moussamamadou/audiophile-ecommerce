@@ -2,11 +2,13 @@
   "kind": "collectionType",
   "collectionName": "products",
   "info": {
-    "name": "product"
+    "name": "product",
+    "description": ""
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": true,
+    "draftAndPublish": false
   },
   "attributes": {
     "title": {
@@ -17,8 +19,33 @@
       "type": "string",
       "required": true
     },
+    "features": {
+      "type": "richtext"
+    },
     "price": {
-      "type": "float"
+      "type": "float",
+      "required": true
+    },
+    "newProduct": {
+      "type": "boolean"
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "categories": {
+      "collection": "category",
+      "via": "products"
     },
     "image": {
       "model": "file",
@@ -29,20 +56,18 @@
         "videos"
       ],
       "plugin": "upload",
-      "required": true
+      "required": true,
+      "pluginOptions": {}
     },
-    "slug": {
-      "type": "uid",
-      "targetField": "title"
-    },
-    "categories": {
-      "collection": "category",
-      "via": "products"
-    },
-    "Custom_field": {
+    "boxContent": {
       "type": "component",
       "repeatable": true,
-      "component": "custom.custom-field"
+      "component": "custom.box-content"
+    },
+    "relatedArticles": {
+      "type": "component",
+      "repeatable": false,
+      "component": "custom.related-articles"
     },
     "status": {
       "type": "enumeration",
@@ -52,6 +77,18 @@
       ],
       "default": "published",
       "required": true
+    },
+    "frontPage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
     }
   }
 }

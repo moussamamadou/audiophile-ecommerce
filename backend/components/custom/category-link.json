@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_custom_category_link",
+  "info": {
+    "name": "categoryLink",
+    "icon": "equals",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "linkImage": {
+      "type": "component",
+      "repeatable": true,
+      "component": "links.link-image"
+    }
+  }
+}
