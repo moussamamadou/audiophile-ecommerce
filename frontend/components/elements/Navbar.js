@@ -36,10 +36,7 @@ const Navbar = ({ navbar, categoryLink }) => {
                           <div className="container grid grid-cols-1 md:grid-cols-3 gap-20 md:gap-5 py-16 relative">
                             {categoryLink.linkImage.map((mylink) => (
                               <Menu.Item key={mylink.id}>
-                                <div
-                                  className="relative flex flex-col justify-between items-center h-full z-10"
-                                  
-                                >
+                                <div className="relative flex flex-col justify-between items-center h-full z-10">
                                   <div className="absolute h-2/3 w-full bottom-[-35px] left-0 bg-neutral rounded-lg z-0"></div>
                                   <div className="w-1/2">
                                     <CustomImage media={mylink.image} />
