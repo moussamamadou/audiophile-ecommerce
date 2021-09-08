@@ -11,12 +11,13 @@ export async function fetchAPI(path) {
     const response = await fetch(requestUrl, {
       method: "GET",
       headers: {
-        // update with your user-agent
         "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36",
-        Accept: "application/json; charset=UTF-8",
+        "Accept": "application/json",
+        "Content-Type" : "application/json",
       },
     })
     const data = await response.json()
+    console.log("Fetch from" + requestUrl + " : " + data)
     return data
   } catch (error) {
     console.log(error)
