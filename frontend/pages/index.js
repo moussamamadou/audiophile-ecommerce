@@ -1,21 +1,36 @@
-import Head from "next/head"
-import ProductsList from "../components/ProductsList"
-import { getProducts } from "../utils/api"
+import { getHomePage } from "../utils/api"
+import CategoryLink from "../components/section/CategoryLink"
+import HeroArticles from "../components/section/HeroArticle"
+import HeroSmalls from "../components/section/HeroSmall"
+import CtaProductBig from "../components/section/CtaProductBig"
+import CtaProductMedium from "../components/section/CtaProductMedium"
+import CtaProductSmall from "../components/section/CtaProductSmall"
 
-const HomePage = ({ products }) => {
+const HomePage = ({ homePage, global }) => {
+  const { categoryLink } = global
+  const {
+    HeroArticle,
+    HeroSmall,
+    ctaProductBig,
+    ctaProductMedium,
+    ctaProductSmall,
+  } = homePage
+  console.log(HeroSmall)
   return (
-    <div>
-      <Head>
-        <title>Strapi Next.js E-commerce</title>
-      </Head>
-      <ProductsList products={products} />
+    <div className="flex flex-col gap-10">
+      <HeroArticles heroArticle={HeroArticle.product} />
+      <CategoryLink categoryLink={categoryLink.linkImage} />
+      <CtaProductBig ctaProductBig={ctaProductBig.product} />
+      <CtaProductMedium ctaProductMedium={ctaProductMedium.product} />
+      <CtaProductSmall ctaProductSmall={ctaProductSmall.product} />
+      <HeroSmalls heroSmall={HeroSmall} />
     </div>
   )
 }
 
 export async function getStaticProps() {
-  const products = await getProducts()
-  return { props: { products } }
+  const homePage = await getHomePage()
+  return { props: { homePage } }
 }
 
 export default HomePage
