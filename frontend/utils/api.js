@@ -18,7 +18,6 @@ export async function fetchAPI(path) {
       },
     })
     const data = await response.json()
-    console.log("Fetch from" + requestUrl + " : " + JSON.stringify(data))
     return data
   } catch (error) {
     console.log(error)
