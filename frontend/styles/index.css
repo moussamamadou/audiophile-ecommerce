@@ -1,3 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+:root {
+  --bg-primary: #D87D4A;
+  --bg-secondary: #fbaf85;
+  --bg-neutral: #F1F1F1;
+  --bgColor-modal: var(--bg-neutral);
+  --color-icon: var(--bg-primary);
+  
+  --color-buttonPrimary:  white;
+  --color-buttonPrimary-hover: white;
+  --color-buttonPrimary-active: white;
+  --borderColor-buttonPrimary: var(--bg-primary);
+  --borderColor-buttonPrimary-hover: var(--bg-secondary);
+  --bgColor-buttonPrimary:var(--bg-primary);
+  --bgColor-buttonPrimary-active: var(--bg-secondary) ;
+  --bgColor-buttonPrimary-hover:var(--bg-secondary) ;
+
+  --color-buttonSecondary:  black;
+  --color-buttonSecondary-hover: white;
+  --color-buttonSecondary-active: white;
+  --borderColor-buttonSecondary: black;
+  --borderColor-buttonSecondary-hover: black;
+  --bgColor-buttonSecondary:transparent;
+  --bgColor-buttonSecondary-active: black ;
+  --bgColor-buttonSecondary-hover:black ;
+
+  --borderColor-input-hover:var(--bg-primary);
+  --borderColor-input-active:var(--bg-primary);
+  --borderColor-input-focus:var(--bg-primary);
+  --shadow-input-focus :0 2px 8px -3px  var(--bg-primary);
+
+  --color-badge: white;
+  --bgColor-badge: var(--bg-primary);
+  --borderColor-badge : var(--bg-primary);
+  --color-badge-active: var(--bg-primary);
+  --bgColor-badge-active: white;
+  --borderColor-badge-active: var(--bg-primary);
+
+  --color-link: var(--bg-primary);
+  --color-link-hover: var(--bg-secondary);
+}
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+@layer base {
+  
+  body{
+    @apply text-base font-medium leading-7;
+  }
+  h1 {
+    @apply text-3xl md:text-5xl leading-tight uppercase tracking-wide font-bold;
+  }
+  h2 {
+    @apply text-2xl md:text-4xl leading-10 uppercase tracking-wider font-bold;
+  }
+  h3 {
+    @apply text-xl md:text-3xl leading-9 uppercase tracking-wide font-bold;
+  }
+  h4 {
+    @apply text-2xl leading-8 uppercase tracking-wide font-bold;
+  }
+  h5 {
+    @apply text-2xl leading-7 uppercase tracking-wide font-bold;
+  }
+  h6 {
+    @apply text-xl leading-6 uppercase tracking-wide  font-bold;
+  }
+  p{
+    @apply mb-3
+  }
+  a {
+    @apply text-dark no-underline transition-colors ease-in duration-500;
+  }
+  a > * {
+    @apply text-dark no-underline transition-colors ease-out duration-500;
+  }
+  a:hover{
+    @apply text-primary no-underline ;        
+  }
+  a:hover > * {
+    @apply text-primary no-underline stroke-current fill-current;
+  }
+
+  input{    
+    @apply border-gray-500 border-solid border-2; 
+  }
+}
+
+
+@layer components {
+  .overline{
+    @apply text-primary text-sm leading-5 tracking-widest font-medium;     
+  }
+  .sub-title{
+    @apply text-primary text-sm leading-6 tracking-wide font-bold; 
+  }
+  .btn-one{
+    @apply  flex justify-center items-center bg-primary uppercase text-white border-solid border-primary border-2 text-sm font-bold h-12 px-8 transition-colors ease-out duration-500;  
+  }
+  .btn-one:hover{
+    @apply  bg-secondary text-light border-secondary ;          
+  }  
+  .btn-two{
+    @apply  flex justify-center items-center bg-transparent uppercase text-black border-solid border-black border-2  text-sm font-bold h-12 px-8 transition-colors ease-out duration-500; 
+  } 
+  .btn-two:hover{
+    @apply  bg-black text-white ;          
+  }
+  .btn-tree{
+    @apply  flex justify-center items-center bg-transparent uppercase  bg-black text-white border-solid border-black border-2  text-sm font-bold h-12 px-8 transition-colors ease-out duration-500; 
+  } 
+  .btn-tree:hover{
+    @apply  bg-neutral text-black border-neutral ;          
+  }
+
+}
