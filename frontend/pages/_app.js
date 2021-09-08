@@ -4,9 +4,10 @@ import Layout from "../components/Layout"
 import "../styles/index.css"
 import { getGlobalData } from "../utils/api"
 import Seo from "../components/elements/Seo"
+import globalData from "../data/global-manifest.json"
 
 const MyApp = ({ Component, pageProps }) => {
-  console.log("PageProps - ", JSON.stringify(pageProps))
+  
   return (
     <Layout global={pageProps.global}>
       <Seo metadata={pageProps.global.metadata} />
@@ -31,10 +32,10 @@ MyApp.getInitialProps = async (ctx) => {
   // Calls page's `getInitialProps` and fills `appProps.pageProps`
   const appProps = await App.getInitialProps(ctx)
   // Fetch global site settings from Strapi
-  const global = await getGlobalData()
-  console.log("getInitialProps() - ", JSON.stringify(global))
+  // const global = await getGlobalData()
+  // console.log("getInitialProps() - ", JSON.stringify(global))
   // Pass the data to our page via props
-  return { ...appProps, pageProps: { global } }
+  return { ...appProps, pageProps: { global:globalData } }
 }
 
 export default MyApp
