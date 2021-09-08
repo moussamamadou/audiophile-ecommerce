@@ -31,3 +31,15 @@ export async function getProduct(slug) {
   const products = await fetchAPI(`/products?slug=${slug}`);
   return products?.[0];
 }
+
+// Get Home Page 
+export async function getHomePage() {
+  const global = await fetchAPI(`/home-page`)
+  return global
+}
+
+// Get site data from Strapi (metadata, navbar, footer...)
+export async function getGlobalData() {
+  const global = await fetchAPI(`/global`)
+  return global
+}
