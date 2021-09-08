@@ -6,6 +6,9 @@ import { getGlobalData } from "../utils/api"
 import Seo from "../components/elements/Seo"
 
 const MyApp = ({ Component, pageProps }) => {
+
+  console.log(JSON.stringify(pageProps))
+
   return (
     <Layout global={pageProps.global}>
       <Seo metadata={pageProps.global.metadata} />
