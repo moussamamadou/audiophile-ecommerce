@@ -35,10 +35,10 @@ const Navbar = ({ navbar, categoryLink }) => {
                         <div className=" w-full bg-white absolute top-[95px] left-0 pb-10">
                           <div className="container grid grid-cols-1 md:grid-cols-3 gap-20 md:gap-5 py-16 relative">
                             {categoryLink.linkImage.map((mylink) => (
-                              <Menu.Item>
+                              <Menu.Item key={mylink.id}>
                                 <div
                                   className="relative flex flex-col justify-between items-center h-full z-10"
-                                  key={mylink.id}
+                                  
                                 >
                                   <div className="absolute h-2/3 w-full bottom-[-35px] left-0 bg-neutral rounded-lg z-0"></div>
                                   <div className="w-1/2">
@@ -85,9 +85,9 @@ const Navbar = ({ navbar, categoryLink }) => {
                 </li>
               ))}
             </ul>
-            <button class="snipcart-checkout">
+            <button className="snipcart-checkout">
               <CustomImage src="/cart.svg" height={25} width={25} />
-              <span class="snipcart-items-count bg-primary text-sm font-bold rounded-full text-white px-2 py-1 absolute top-[15px] -ml-3"></span>
+              <span className="snipcart-items-count bg-primary text-sm font-bold rounded-full text-white px-2 py-1 absolute top-[15px] -ml-3"></span>
             </button>
           </div>
         </div>

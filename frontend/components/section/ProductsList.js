@@ -18,11 +18,7 @@ const ProductsList = ({ products }) => {
               <CustomImage media={_product.image} />
             </div>
             <div className="inline-flex lg:hidden h-[500px] rounded-lg overflow-hidden">
-              <Image
-                src={_product.image.url}
-                layout="fill"
-                objectFit="cover"
-              />
+              <Image src={_product.image.url} layout="fill" objectFit="cover" />
             </div>
           </div>
           <div className="w-full lg:w-1/2 flex flex-col justify-center gap-5 ">

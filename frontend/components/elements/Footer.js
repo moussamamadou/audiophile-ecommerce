@@ -32,17 +32,17 @@ const Footer = ({ footer }) => {
               <div className="flex gap-5 justify-center lg:justify-end items-center">
                 <Link href="/">
                   <a>
-                    <CustomImage src='/github.svg'  height={30} width={30}  />
+                    <CustomImage src="/github.svg" height={30} width={30} />
                   </a>
                 </Link>
                 <Link href="/">
-                  <a >
-                    <CustomImage src='/linkedin.svg'  height={30} width={30}  />
+                  <a>
+                    <CustomImage src="/linkedin.svg" height={30} width={30} />
                   </a>
                 </Link>
                 <Link href="/">
-                  <a >
-                    <CustomImage src='/facebook.svg'   height={30} width={30} />
+                  <a>
+                    <CustomImage src="/facebook.svg" height={30} width={30} />
                   </a>
                 </Link>
               </div>

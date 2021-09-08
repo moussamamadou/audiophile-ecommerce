@@ -1,11 +1,6 @@
 import classNames from "classnames"
 
-const Button = ({
-  button,
-  appearance,
-  handleClick,
-  type,
-}) => {
+const Button = ({ button, appearance, handleClick, type }) => {
   return (
     <button link={button} onClick={handleClick} type={type}>
       <div
@@ -38,6 +33,5 @@ const Button = ({
     </button>
   )
 }
-
 
 export default Button

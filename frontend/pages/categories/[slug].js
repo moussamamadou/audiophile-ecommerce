@@ -18,7 +18,7 @@ const CategoryPage = ({ category, global }) => {
       </Head>
       <div className=".hero bg-dark   z-10">
         <div className="container py-10 md:py-20 border-0 lg:border-t-2 lg:border-gray-600 lg:border-opacity-50 text-center ">
-            <h1 className='text-white'>{category.name}</h1>
+            <h1 className="text-white">{category.name}</h1>
         </div>
       </div>
       <ProductsList products={category.products} />

@@ -3,7 +3,7 @@ import { getStrapiMedia } from "../../utils/medias"
 
 const Seo = ({ metadata }) => {
   // Prevent errors if no metadata was set
-  // if (!metadata) return null
+  if (!metadata) return null
 
   return (
     <NextSeo
@@ -20,7 +20,7 @@ const Seo = ({ metadata }) => {
             url: getStrapiMedia(metadata.shareImage.url),
             width: metadata.shareImage.width,
             height: metadata.shareImage.height,
-          }
+          },
         }),
       }}
     />

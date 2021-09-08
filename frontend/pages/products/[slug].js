@@ -51,7 +51,7 @@ const ProductPage = ({ product, global }) => {
                   data-item-id={product.id}
                   data-item-price={product.price}
                   data-item-url={process.env.NEXT_PUBLIC_DOMAIN + router.asPath}
-                  // data-item-url={'http://b41b-78-201-21-129.ngrok.io' + router.asPath}
+                  // data-item-url={"http://b41b-78-201-21-129.ngrok.io" + router.asPath}
                   data-item-description={product.description}
                   data-item-image={getStrapiMedia(
                     product.image.formats.thumbnail.url
@@ -103,7 +103,7 @@ const ProductPage = ({ product, global }) => {
       </div>
       <div className="container">
         <Gallery>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-10' >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {product.images.map((image) => (
               <Item
                 key={image.id}
@@ -113,7 +113,12 @@ const ProductPage = ({ product, global }) => {
                 height={image.height}
               >
                 {({ ref, open }) => (
-                  <img ref={ref} onClick={open} src={image.url} className='object-cover w-full'/>
+                  <img
+                    ref={ref}
+                    onClick={open}
+                    src={image.url}
+                    className="object-cover w-full"
+                  />
                 )}
               </Item>
             ))}

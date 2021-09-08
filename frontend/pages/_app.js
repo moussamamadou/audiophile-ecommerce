@@ -8,13 +8,13 @@ import Seo from "../components/elements/Seo"
 const MyApp = ({ Component, pageProps }) => {
   return (
     <Layout global={pageProps.global}>
-      <Seo  metadata={pageProps.global.metadata} /> 
-      <Head>        
+      <Seo metadata={pageProps.global.metadata} />
+      <Head>
         <link rel="preconnect" href="https://app.snipcart.com" />
         <link rel="preconnect" href="https://cdn.snipcart.com" />
         <link
           rel="stylesheet"
-          href="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.css" 
+          href="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.css"
         />
       </Head>
       <Component {...pageProps} />
