@@ -7,7 +7,7 @@ import Seo from "../components/elements/Seo"
 import globalData from "../data/global-manifest.json"
 
 const MyApp = ({ Component, pageProps }) => {
-  
+  pageProps.global = globalData
   return (
     <Layout global={pageProps.global}>
       <Seo metadata={pageProps.global.metadata} />
@@ -35,7 +35,7 @@ MyApp.getInitialProps = async (ctx) => {
   // const global = await getGlobalData()
   // console.log("getInitialProps() - ", JSON.stringify(global))
   // Pass the data to our page via props
-  return { ...appProps, pageProps: { global:globalData } }
+  return { ...appProps, pageProps: { global: globalData } }
 }
 
 export default MyApp
