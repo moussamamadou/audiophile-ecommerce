@@ -53,7 +53,7 @@ export async function getHomePage() {
 // Get site data from Strapi (metadata, navbar, footer...)
 export async function getGlobalData() {
   const global = await fetchAPI(`/global`)
-  
+
   console.log("getGlobalData() - ", JSON.stringify(global))
   return global
 }

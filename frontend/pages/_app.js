@@ -33,7 +33,7 @@ MyApp.getInitialProps = async (ctx) => {
   // Fetch global site settings from Strapi
   const global = await getGlobalData()
   console.log("getInitialProps() - ", JSON.stringify(global))
-    // Pass the data to our page via props
+  // Pass the data to our page via props
   return { ...appProps, pageProps: { global } }
 }
 
