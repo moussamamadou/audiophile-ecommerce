@@ -15,7 +15,6 @@ const HomePage = ({ homePage, global }) => {
     ctaProductMedium,
     ctaProductSmall,
   } = homePage
-  console.log(HeroSmall)
   return (
     <div className="flex flex-col gap-10">
       <HeroArticles heroArticle={HeroArticle.product} />

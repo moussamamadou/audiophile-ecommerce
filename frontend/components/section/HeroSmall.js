@@ -2,7 +2,6 @@ import Image from "next/image"
 import parse from "html-react-parser"
 
 export default function HeroSmall({ heroSmall }) {
-  console.log(heroSmall)
   return (
     <div className=".CtaProductSmall">
       <div className="container my-10 ">

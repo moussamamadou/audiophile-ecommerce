@@ -3,7 +3,6 @@ import Image from "next/image"
 import CustomImage from "../elements/CustomImage"
 
 const ProductsList = ({ products }) => {
-  console.log(products)
   return (
     <div className={`.ProductList flex flex-col `}>
       {products.map((_product, key) => (
